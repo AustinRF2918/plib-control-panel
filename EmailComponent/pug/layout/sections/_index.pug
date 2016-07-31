@@ -5,14 +5,6 @@ body
     +_controlPanel_header_generateHeader("Settings", "settings")
   .container.p-container
     +_controlPanel_container_generateButtonContainer("l-container", ["Account", "Password", "Plans and Billing", "Deactivate"], "btn-container", "Account")
-    .r-container
-      .col-md-6
-        <div class="form-group">
-            <label for="exampleInputEmail1">Your Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-        <div class="text-xs-center text-sm-left">
-          <button type="submit" class="btn btn-primary">Save Changes</button>
-        </div>
+    +_controlPanel_container_SUBMODULE_generateEmailModule("r-container", "emailReset", "Your Email", "inputEmail", "Enter Email", "btn btn-primary", "Save Changes")
 
      

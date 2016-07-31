@@ -13,3 +13,16 @@ mixin _controlPanel_container_generateButtonContainer(containerSelector, bList, 
       else
         div(class=[iterableSelector])
           a=entry
+
+//-This mixin cooresponds to the mixins contained within 
+//-sass/component/container/ container::generateEmailModule.
+//-It takes a selector for the label, the for data, a placeholder
+//-button styling and button text
+mixin _controlPanel_container_SUBMODULE_generateEmailModule(containerSelector, forName, labelName, emailSelector, emailText, btnSelector, btnText)
+  div(class=[containerSelector])
+    .col-md-6
+      .form-group
+        label(for=forName)=labelName
+          input(type="email", class=["form-control"], id=emailSelector, ariadescribedby="Change Email", placeholder=emailText)
+        .text-xs-center.text-sm-left
+          button(type="submit", class=btnSelector)=btnText

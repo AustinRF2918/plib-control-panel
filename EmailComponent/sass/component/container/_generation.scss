@@ -1,58 +1,19 @@
-//container::generateMContainer: takes a selector to a parent N container and it's
-//submodules selectors and applies an interface to them for stylization.
-@mixin _notificationContainer_container_generateMContainer($selector, $subcomponentSelector){
-    #{$selector}{
-	@warn("Utilizing _notificationContainer_container_generateMContainer requires the mixin:");
-	@warn("_notificationContainer_container_stylizeNContainer() and _notification_container_stylizeSubColumns() to be defined.");
-	@include _notificationContainer_container_stylizeNContainer();
-	#{$subcomponentSelector}{
-	  @include _notificationContainer_container_stylizeSubColumns();
-	}
+@mixin _controlPanel_container_generateParentContainer($selector) {
+    #{$selector} {
+	display: flex;
+	@content;
     }
 }
 
-//container::generateRContainer: takes a selector to a parent M container and it's
-//submodules selectors and applies an interface to them for stylization.
-@mixin _notificationContainer_container_generateRContainer($selector, $buttonSelector){
-    #{$selector}{
-	@warn("Utilizing _notificationContainer_container_generateRContainer requires the mixin:");
-	@warn("_notificationContainer_container_stylizeRContainer() and _notification_container_stylizeRContainerButton() to be defined.");
-	@include _notificationContainer_container_stylizeRContainer();
-	#{$buttonSelector}{
-	  @include _notificationContainer_container_stylizeRContainerButton();
-	}
+@mixin _controlPanel_container_generateGenericContainer($selector, $width) {
+    #{$selector} {
+	width: $width;
+	@content;
     }
 }
 
-//Refactor later into seperate modules.
-
-//container::generateSubmoduleMessage: takes a selector to a submodule 
-//selector and applies an interface to them for stylization.
-@mixin _notificationContainer_container_generateSubmoduleMessage($selector){
-    #{$selector}{
-	@warn("Utilizing _notificationContainer_container_generateSubmoduleMessage requires the mixin:");
-	@warn("_notificationContainer_container_stylizeSubmoduleMessage");
-	@include _notificationContainer_container_stylizeSubmoduleMessage();
+@mixin _controlPanel_container_generateBtnContainer($selector) {
+    #{$selector} {
+      @content
     }
 }
-
-//container::generateSubmoduleEmailHeader: takes a selector to a submodule 
-//selector and applies an interface to them for stylization.
-@mixin _notificationContainer_container_generateSubmoduleEmailHeader($selector){
-    #{$selector}{
-	@warn("Utilizing _notificationContainer_container_generateSubmoduleMessage requires the mixin:");
-	@warn("_notificationContainer_container_stylizeSubmoduleEmailHeader");
-	@include _notificationContainer_container_stylizeSubmoduleEmailHeader();
-    }
-}
-
-//container::generateSubmoduleEmailHeader: takes a selector to a submodule 
-//selector and applies an interface to them for stylization.
-@mixin _notificationContainer_container_generateSubmoduleDate($selector){
-    #{$selector}{
-	@warn("Utilizing _notificationContainer_container_generateSubmoduleDate requires the mixin:");
-	@warn("_notificationContainer_container_stylizeSubmoduleDate");
-	@include _notificationContainer_container_stylizeSubmoduleDate();
-    }
-}
-

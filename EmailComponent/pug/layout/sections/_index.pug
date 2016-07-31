@@ -3,12 +3,11 @@ include ../../utility/component-lib/_controlPanel_container_generateContainer.pu
 body
   .container
     +_controlPanel_header_generateHeader("Settings", "settings")
-    +_controlPanel_header_generateSubheader("Email Settings", "sub-information")
-    .p-t-1
-    +_controlPanel_header_generateHeaderBreak()
-  .container
-    each val in [1]
-      +_controlPanel_container_generateMContainer("m-container", "m-container-break", "m-container-component")
-  .container
-      +_controlPanel_container_generateRContainer("r-container", "r-container-break", "r-container-component")
+  .container.p-container
+    .l-container
+      a.btn-container.btn-container-active Account
+      a.btn-container Password
+      a.btn-container Plans and Billing
+      a.btn-container Deactivate
+    .r-container
      

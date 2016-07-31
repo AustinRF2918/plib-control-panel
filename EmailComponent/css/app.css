@@ -79,105 +79,37 @@
   .p-l-0-mobile {
     padding-left: 0px !important; } }
 
-.m-container {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  height: auto; }
-  .m-container .m-container-component * {
-    margin: 0px; }
+html, body {
+  background: #f2f2f2; }
+  html *, body * {
+    font-family: "Source Sans Pro"; }
+
+.p-container {
+  display: flex;
+  padding-top: 30px; }
+
+.l-container {
+  width: 15%;
+  padding-top: 10px;
+  margin-left: 0px;
+  margin-right: 40px;
+  height: 300px;
+  background: white; }
+  .l-container .btn-container {
+    color: black;
+    background: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    display: flex; }
+    .l-container .btn-container-active {
+      background: #e6e6e6;
+      font-weight: 800; }
 
 .r-container {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  height: auto; }
-  .r-container .submit-button {
-    font-family: "Source Sans Pro";
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin: 0 !important;
-    border: none;
-    border-radius: 0px !important;
-    display: inline-block;
-    height: 30px;
-    line-height: 30px;
-    outline: 0;
-    padding: 0 1rem;
-    vertical-align: middle;
-    -webkit-tap-highlight-color: transparent;
-    background-color: #311B92;
-    color: white;
-    text-align: center;
-    letter-spacing: .5px;
-    transition: .2s ease-out;
-    cursor: pointer; }
-    .r-container .submit-button:hover {
-      background: #8e68cf;
-      text-decoration: none;
-      color: white;
-      transition-duration: 0.2s;
-      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26); }
-
-.contactee .user-name, .contactee .message-date {
-  font-family: "Source Sans Pro"; }
-
-.contactee .message-date {
-  font-size: 14px;
-  color: #666666;
-  padding-left: 10px; }
-
-.contactee .user-name {
-  font-weight: 600; }
-
-.contactee .user-location {
-  color: #666666; }
-
-.contactee .img-container img {
-  max-width: 60px;
-  position: relative; }
-
-@media screen and (max-width: 767px) {
-  .contactee .img-container img {
-    display: none;
-    padding-left: 0px !important;
-    padding-right: 0px !important; } }
-
-@media screen and (max-width: 767px) {
-  .contactee .content-container {
-    padding-left: 0px !important;
-    padding-right: 10px !important; } }
-
-.contactee .user-message {
-  margin-top: 10px; }
-
-.email-data * {
-  font-family: "Source Sans Pro"; }
-
-.email-data .col-md-12 {
-  top: 50%;
-  transform: translateY(-50%); }
-  @media screen and (max-width: 767px) {
-    .email-data .col-md-12 {
-      padding-left: 10px !important;
-      padding-right: 0px !important; } }
-  .email-data .col-md-12 .email-header {
-    font-weight: 800; }
-  .email-data .col-md-12 .email-preview {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: #666666; }
-
-.email-date {
-  height: 100%; }
-  .email-date * {
-    color: #666666;
-    font-family: "Source Sans Pro"; }
-  .email-date .col-md-12 {
-    top: 50%;
-    transform: translateY(-50%); }
-  @media screen and (max-width: 767px) {
-    .email-date {
-      display: none; } }
+  width: 85%;
+  background: red;
+  height: 300px; }
 
 .settings {
   font-family: "Source Sans Pro";

@@ -1,158 +1,40 @@
 @import 'generation';
 
-@mixin _notificationContainer_container_stylizeNContainer() {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    height: auto;
-};
-
-@mixin _notificationContainer_container_stylizeSubColumns() {
-    * {
-	margin: 0px;
-    }
-};
-
-@include _notificationContainer_container_generateMContainer(".m-container", ".m-container-component");
-
-@mixin _notificationContainer_container_stylizeRContainer() {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    height: auto;
-};
-
-@mixin _notificationContainer_container_stylizeRContainerButton() {
-font-family: "Source Sans Pro";
-	padding-top: 15px;
-	padding-bottom: 15px;
-	margin: 0 !important;
-	border: none;
-	border-radius: 0px !important;
-	display: inline-block;
-	height: 30px;
-	line-height: 30px;
-	outline: 0;
-	padding: 0 1rem;
-	vertical-align: middle;
-	-webkit-tap-highlight-color: transparent;
-	background-color: #311B92;
-	color: white;
-	text-align: center;
-	letter-spacing: .5px;
-	transition: .2s ease-out;
-	cursor: pointer;
-
-	&:hover{
-	    background: #8e68cf;
-	    text-decoration: none;
-	    color: white;
-	    transition-duration: 0.2s;
-	    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26);
-	}
-};
-
-@include _notificationContainer_container_generateRContainer(".r-container", ".submit-button");
-
-
-
-//Include as library module at later point.
-@mixin _notificationContainer_container_stylizeSubmoduleMessage(){
-    .user-name, .message-date {
+html, body{
+    *{
       font-family: "Source Sans Pro";
     }
-
-    .message-date{
-	font-size: 14px;
-	color: lighten(black, 40%);
-	padding-left: 10px;
-    }
-
-    .user-name {
-        font-weight: 600;
-    }
-
-    .user-location {
-	color: lighten(black, 40%);
-    }
-
-    .img-container {
-	img {
-	    max-width: 60px;
-	    position: relative;
-	}
-	@media screen and (max-width: 767px){
-	  img {
-	      display: none;
-	      padding-left: 0px !important;
-	      padding-right: 0px !important;
-	  }
-	}
-    }
-
-    .content-container {
-        @media screen and (max-width: 767px) {
-	  padding-left: 0px !important;
-	  padding-right: 10px !important;
-        }
-    }
-
-    .user-message {
-	margin-top: 10px;
-    }
+  background: lighten(black, 95%);
 }
 
-@include _notificationContainer_container_generateSubmoduleMessage(".contactee");
+@include _controlPanel_container_generateParentContainer(".p-container"){
+    padding-top: 30px;
+}
 
-
-//Include as library module at later point.
-@mixin _notificationContainer_container_stylizeSubmoduleEmailHeader(){
-
-    * {
-      font-family: "Source Sans Pro";
-    }
-
-
-    .col-md-12 {
-     @media screen and (max-width: 767px) {
-	padding-left: 10px !important;
-	padding-right: 0px !important;
-      }
-
-      top: 50%;
-      transform: translateY(-50%);
-
-      .email-header{
+@include _controlPanel_container_generateGenericContainer(".l-container", 15%) {
+    @include _controlPanel_container_generateBtnContainer(".btn-container")
+    {
+      color: black;
+      background: white;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 20px;
+      display: flex;
+      &-active{
+	  background: lighten(black, 90%);
 	  font-weight: 800;
       }
-
-      .email-preview{
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-	  white-space: nowrap;
-	  color: lighten(black, 40%);
-      }
-    }
-}
-
-@include _notificationContainer_container_generateSubmoduleEmailHeader(".email-data");
-
-//Include as library module at later point.
-@mixin _notificationContainer_container_stylizeSubmoduleDate(){
-
-    height: 100%;
-
-    * {
-      color: lighten(black, 40%);
-      font-family: "Source Sans Pro";
     }
 
-    .col-md-12 {
-      top: 50%;
-      transform: translateY(-50%);
-    }
+    padding-top: 10px;
+    margin-left: 0px;
+    margin-right: 40px;
+    height: 300px;
+    background: white;
+};
 
-    @media screen and (max-width: 767px) {
-	display: none;
-    }
-}
+@include _controlPanel_container_generateGenericContainer(".r-container", 85%) {
+    background: red;
+    height: 300px;
+};
 
-@include _notificationContainer_container_generateSubmoduleDate(".email-date");

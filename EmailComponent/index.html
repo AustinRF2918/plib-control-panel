@@ -34,28 +34,6 @@
   <!--sass/component/header/ header::generateSubheaderActionButtons-->
   <!--takes the name of the "iterable" that we are displaying -->
   <!--as well as it's range, and it's selector-->
-  <!--NOTE: MUST BE REFACTORED INTO SEPERATE MODULE AT LATER-->
-  <!--DATE!-->
-  <!--This mixin corresponds to the mixins contained within-->
-  <!--sass/component/container/. container::generateSubmoduleMessage-->
-  <!--IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.-->
-  <!--This mixin corresponds to the mixins contained within-->
-  <!--sass/component/container/. container::generateSubmoduleReply-->
-  <!--IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.--></div>
-  <p><span class="user-name"></span> <span class="message-date">  </span></p><p class="user-message">  </p>
-  <!--This mixin corresponds to the mixins contained within-->
-  <!--no Sass file: it must be declared within an interface-->
-  <!--mixin in the container::generateMContainer mixin.-->
-  <!--This mixin corresponds to the mixins contained within-->
-  <!--sass/component/container/. container::generateMContainer-->
-  <!--takes a simple selector and generates it. Within the row-->
-  <!--one should use the generateSubcolumn with a classname for-->
-  <!--subcomponent styling.-->
-  <!--This mixin corresponds to the mixins contained within-->
-  <!--sass/component/container/. container::generateRContainer-->
-  <!--takes a simple selector and generates it. Within the row-->
-  <!--one should use the generateSubcolumn with a classname for-->
-  <!--subcomponent styling.-->
   <body>
     <div class="container">
         <div class="row settings">
@@ -63,47 +41,10 @@
             <h2>Settings</h2>
           </div>
         </div>
-        <div class="row sub-information">
-          <div class="col-md-12">
-            <h2>Email Settings</h2>
-          </div>
-        </div>
-      <div class="p-t-1"></div>
-        <div class="row">
-          <hr class="m-y-0"/>
-        </div>
     </div>
-    <div class="container">
-        <div class="row m-container">
-            <div class="m-container-component col-xs-12">
-                <div class="contactee">
-                  <div class="col-md-1 img-container"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-11 content-container">
-                    <p><span class="user-name">French Fries</span> <span class="message-date"> July 22</span></p><p class="user-message"> 366 kCal Es gibt eine schoenes madchen wer in Deutschland lebt aber sie ist kaputt und alles geht mit ihr sued, leidir muss man manchinmal lass es zu und einach wieder anfangen und fang der koerper an und andere sache das ich nicht weiss ja? Ich meine wie koennte jemand so geil sein dass die DASS machen manchmal mussen wir zuschauen auf was geht ab and wirklich denken was koennte ich dafuer machen? Koennte ich etwas wo es schoen ist tun oder soll ich weglaufen oder was! <br><br> Ach ja, und auch muss ich mich frage warum jede mal das ich dich frage, du sagst das es keine gibt! Ja ja manchmal muss es so sein dass es ja das richtig nicht gibt, aber das nur manchmal! <br><br> Ach ja, und auch muss ich mich frage warum jede mal das ich dich frage, du sagst das es keine gibt! Ja ja manchmal muss es so sein dass es ja das richtig nicht gibt, aber das nur manchmal und wie koennte das ueberhaupt sein? Dass jemand einfach hier lauft und mir sagt 'Ja du hast das gewonnen! </p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="m-container-break m-y-0"/>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row r-container">
-            <div class="r-container-component col-xs-12">
-                <div class="contactee">
-                  <div class="col-md-1 img-container"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-11 content-container">
-                    <div class="form-group">
-                      <textarea class="form-control" rows="5"></textarea>
-                    </div><a class="submit-button">Reply</a>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="r-container-break m-y-0"/>
-        </div>
+    <div class="container p-container">
+      <div class="l-container"><a class="btn-container btn-container-active">Account</a><a class="btn-container">Password</a><a class="btn-container">Plans and Billing</a><a class="btn-container">Deactivate</a></div>
+      <div class="r-container"></div>
     </div>
   </body>
 </html>

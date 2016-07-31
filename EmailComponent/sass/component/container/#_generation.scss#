@@ -85,12 +85,8 @@
 	    flex-direction: column;
 	    @include _controlPanel_container_interactiveModuleStyling();
 	    .s-comp{
-		text-align: center;
-		background:grey;
-		p {
-		    margin-top: 10px;
-		    margin-bottom: 10px;
-		}
+		@include _controlPanel_container_interactiveModuleSubStyling();
+		
 	    }
 	}
 	label {

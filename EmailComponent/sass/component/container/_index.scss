@@ -49,5 +49,22 @@ html, body{
     height: 300px;
 };
 
-@include _controlPanel_container_generateAuthenticateChangeModule(".r-container");
+@mixin _controlPanel_container_interactiveModuleStyling(){
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 300px;
+    border: 1px gray solid;
+    background:white;
+}
+
+@mixin _controlPanel_container_interactiveModuleSubStyling(){
+    text-align: center;
+    background:grey;
+    p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+    }
+}
+
+@include _controlPanel_container_generateInteractiveModule(".r-container");
 

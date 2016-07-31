@@ -41,3 +41,26 @@ mixin _controlPanel_container_SUBMODULE_generateAuthenticateChangeModule(contain
         .text-xs-center.text-sm-left
           button(type="submit", class=btnSelector)=btnText
 
+//-This mixin cooresponds to the mixins contained within 
+//-sass/component/container/ container::interactiveModule.
+mixin _controlPanel_container_SUBMODULE_generateInteractiveModule(containerSelector, forName, labelName, btnSelector, btnText, type)
+  div(class=[containerSelector])
+    .col-md-12
+      .form-group
+        label(for=forName)=labelName
+      .i-system
+        .col-md-4.i-comp.p-x-0
+          p 
+          .s-comp
+            p Select
+        .col-md-4.i-comp.p-x-0
+          p 
+          .s-comp
+            p Select
+        .col-md-4.i-comp.p-x-0
+          p 
+          .s-comp
+            p Select
+      .text-xs-center.text-sm-left.m-t-2
+        button(type="submit", class=btnSelector)=btnText
+

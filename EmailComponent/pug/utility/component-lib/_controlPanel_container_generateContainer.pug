@@ -1,0 +1,15 @@
+//-This mixin cooresponds to the mixins contained within 
+//-sass/component/container/ container::generateButtonContainer.
+//-It takes a selector for the entire container and a selector
+//-for the buttons the will be generated. It also takes a
+//-word representing what is active and will apply that to 
+//-whatever iterable that is.
+mixin _controlPanel_container_generateButtonContainer(containerSelector, bList, iterableSelector, activeText)
+  div(class=[containerSelector])
+    each entry in bList 
+      if entry == activeText 
+        div(class=[iterableSelector, iterableSelector+"-active"])
+          a=entry
+      else
+        div(class=[iterableSelector])
+          a=entry

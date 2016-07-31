@@ -49,5 +49,5 @@ html, body{
     height: 300px;
 };
 
-@include _controlPanel_container_generateEmailModule(".r-container");
+@include _controlPanel_container_generateAuthenticateChangeModule(".r-container");
 

@@ -26,3 +26,18 @@ mixin _controlPanel_container_SUBMODULE_generateEmailModule(containerSelector, f
           input(type="email", class=["form-control"], id=emailSelector, ariadescribedby="Change Email", placeholder=emailText)
         .text-xs-center.text-sm-left
           button(type="submit", class=btnSelector)=btnText
+
+//-This mixin cooresponds to the mixins contained within 
+//-sass/component/container/ container::authenticateChangeModule.
+//-It takes a selector for the label, the for data, a placeholder
+//-button styling and button text
+mixin _controlPanel_container_SUBMODULE_generateAuthenticateChangeModule(containerSelector, forName, labelName, formSelector, placeholderText, btnSelector, btnText, type)
+  div(class=[containerSelector])
+    .col-md-6
+      .form-group
+        label(for=forName)=labelName
+          input(type=type, class=["form-control"], id=formSelector, placeholder=placeholderText)
+          input(type=type, class=["form-control"], id=formSelector+"-confirm", placeholder="Confirm " + placeholderText)
+        .text-xs-center.text-sm-left
+          button(type="submit", class=btnSelector)=btnText
+

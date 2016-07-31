@@ -19,6 +19,7 @@
 	}
 
 	@media screen and (max-width: 767px) {
+	  justify-content: space-between;
 	  width: 100%;
 	}
 	@content;
@@ -27,6 +28,22 @@
 
 @mixin _controlPanel_container_generateBtnContainer($selector) {
     #{$selector} {
-      @content
+	display: flex;
+	@media screen and (max-width: 768px) {
+	    align-item: center;
+	}
+        @content
+    }
+}
+
+@mixin _controlPanel_container_btnStylize() {
+    a {
+	@content
+    }
+}
+
+@mixin _controlPanel_container_activeStylize() {
+    &-active {
+	@content
     }
 }

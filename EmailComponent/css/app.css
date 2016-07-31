@@ -103,31 +103,30 @@ html, body {
       width: 22.5%; } }
   @media screen and (max-width: 767px) {
     .l-container {
-      width: 100%; } }
-  @media screen and (max-width: 767px) {
-    .l-container {
       justify-content: space-between;
       width: 100%; } }
   .l-container .btn-container {
-    color: black;
+    display: flex;
     background: white;
-    padding-top: 8px;
     padding-bottom: 8px; }
+    @media screen and (max-width: 768px) {
+      .l-container .btn-container {
+        align-item: center; } }
+    .l-container .btn-container a {
+      color: black; }
+    .l-container .btn-container-active {
+      background: #e6e6e6;
+      font-weight: 800; }
     @media screen and (min-width: 768px) {
       .l-container .btn-container {
         padding-left: 20px;
         padding-right: 20px;
-        padding-top: 10px;
-        display: flex; } }
+        padding-top: 10px; } }
     @media screen and (max-width: 768px) {
       .l-container .btn-container {
         padding-right: 5%;
         padding-left: 5%;
-        display: flex;
-        align-items: center; } }
-    .l-container .btn-container-active {
-      background: #e6e6e6;
-      font-weight: 800; }
+        padding-top: 8px; } }
 
 .r-container {
   height: 300px; }
@@ -136,6 +135,7 @@ html, body {
       width: 77.5%; } }
   @media screen and (max-width: 767px) {
     .r-container {
+      justify-content: space-between;
       width: 100%; } }
 
 .settings {

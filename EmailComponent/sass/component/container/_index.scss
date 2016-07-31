@@ -12,42 +12,37 @@ html, body{
 }
 
 @include _controlPanel_container_generateGenericContainer(".l-container", 22.5%) {
-    @media screen and (max-width: 767px) {
-	justify-content: space-between;
-	width: 100%;
-    }
-
-    @include _controlPanel_container_generateBtnContainer(".btn-container")
-    {
-      color: black;
-      background: white;
-      padding-top: 8px;
-      padding-bottom: 8px;
-
-      @media screen and (min-width: 768px) {
-	padding-left: 20px;
-	padding-right: 20px;
-        padding-top: 10px;
-        display: flex;
-      }
-      @media screen and (max-width: 768px) {
-	  padding-right: 5%;
-	  padding-left: 5%;
-	  display: flex;
-	  align-items: center;
-      }
-
-
-      &-active{
-	  background: lighten(black, 90%);
-	  font-weight: 800;
-      }
-    }
 
     margin-left: 0px;
     margin-right: 40px;
     margin-bottom: 20px;
     background: white;
+
+    @include _controlPanel_container_generateBtnContainer(".btn-container")
+    {
+      background: white;
+      padding-bottom: 8px;
+
+      @include _controlPanel_container_btnStylize() {
+        color: black;
+      }
+
+      @include _controlPanel_container_activeStylize(){
+	background: lighten(black, 90%);
+	font-weight: 800;
+      }
+
+      @media screen and (min-width: 768px) {
+	padding-left: 20px;
+	padding-right: 20px;
+        padding-top: 10px;
+      }
+      @media screen and (max-width: 768px) {
+	  padding-right: 5%;
+	  padding-left: 5%;
+	  padding-top: 8px;
+      }
+    }
 };
 
 @include _controlPanel_container_generateGenericContainer(".r-container", 100% - 22.5%) {

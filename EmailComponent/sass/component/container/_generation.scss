@@ -47,3 +47,16 @@
 	@content
     }
 }
+
+@mixin _controlPanel_container_generateEmailModule($selector){
+    #{$selector} {
+	label {
+	    input{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	    }
+	    width: 100%;
+	}
+	@content
+    }
+}

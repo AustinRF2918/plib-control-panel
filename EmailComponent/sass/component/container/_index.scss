@@ -49,3 +49,5 @@ html, body{
     height: 300px;
 };
 
+@include _controlPanel_container_generateEmailModule(".r-container");
+

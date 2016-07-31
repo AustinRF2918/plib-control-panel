@@ -138,6 +138,12 @@ html, body {
       justify-content: space-between;
       width: 100%; } }
 
+.r-container label {
+  width: 100%; }
+  .r-container label input {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+
 .settings {
   font-family: "Source Sans Pro";
   color: black;

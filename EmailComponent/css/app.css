@@ -138,8 +138,9 @@ html, body {
       justify-content: space-between;
       width: 100%; } }
 
-.r-container .i-system {
-  display: flex; }
+@media screen and (min-width: 768px) {
+  .r-container .i-system {
+    display: flex; } }
 
 .r-container .i-comp {
   display: flex;
@@ -150,6 +151,9 @@ html, body {
   height: 300px;
   border: 1px gray solid;
   background: white; }
+  @media screen and (max-width: 767px) {
+    .r-container .i-comp {
+      margin-top: 40px; } }
   .r-container .i-comp .s-comp {
     text-align: center;
     background: grey; }

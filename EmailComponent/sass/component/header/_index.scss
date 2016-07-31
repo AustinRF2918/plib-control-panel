@@ -1,6 +1,6 @@
 @import "generation";
 
-@mixin _notificationInformation_header_headerStylization(){
+@mixin _controlPanel_header_headerStylization(){
     font-family: "Source Sans Pro";
     color: black;
     padding-top: 20px;
@@ -9,104 +9,14 @@
     }
 }
 
-@include _notificationInformation_header_generateHeader(".food-message");
+@include _controlPanel_header_generateHeader(".settings");
 
-@mixin _notificationInformation_header_navStylization(){
+@mixin _controlPanel_header_subheaderStylization(){
     font-family: "Source Sans Pro";
-    color: lighten(black, 60%);
-    &:hover{
-	cursor: pointer;
-    }
-}
-
-@mixin _notificationInformation_header_navActiveStylization(){
-    font-family: "Source Sans Pro";
-    color: black;
-    font-weight: 700;
-    &:hover{
-	cursor: pointer;
-    }
-}
-
-@include _notificationInformation_header_generateNavStyle(".food-navigation");
-
-@mixin _notificationInformation_header_locationStylization() {
-    font-weight: 700;
-    font-family: "Source Sans Pro";
-    color: black;
-    top: 5;
-    height: 36px;
-
-
-    p{
-	margin-bottom: 0px !important;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-    }
-}
-
-@include _notificationInformation_header_generateLocationStyle(".iteration-location")
-
-@mixin _notificationInformation_header_subheaderStylization() {
+    color: lighten(black, 30%);
     * {
-        font-family: "Source Sans Pro";
-	font-weight: 600;
-	font-size: 22px;
+      font-size: 18px;
     }
-};
+}
 
-@mixin _notificationInformation_header_subheaderParentStylization() {
-    color: #2196F3;
-};
-
-@mixin _notificationInformation_header_subheaderDividerStylization() {
-    margin-left: 5px;
-    margin-right: 5px;
-    color: lighten(black, 60%);
-};
-
-@mixin _notificationInformation_header_subheaderDataStylization() {
-    color: black;
-};
-
-@include _notificationInformation_header_generateSubheaderNavigation(".food-message-location");
-
-@mixin _notificationInformation_header_subheaderButtonContainerStyles(){
-};
-
-@mixin _notificationInformation_header_subheaderButtonStyles(){
-    * {
-        font-family: "Source Sans Pro";
-	padding-top: 15px;
-	padding-bottom: 15px;
-	margin: 0 !important;
-	border: none;
-	border-radius: 0px !important;
-	display: inline-block;
-	height: 30px;
-	line-height: 30px;
-	outline: 0;
-	padding: 0 1rem;
-	vertical-align: middle;
-	-webkit-tap-highlight-color: transparent;
-	background: darken(#fff, 20%);
-	color: white;
-	text-align: center;
-	letter-spacing: .5px;
-	transition: .2s ease-out;
-	cursor: pointer;
-    }
-
-    a:hover{
-	background: white;
-	text-decoration: none;
-    }
-
-    .archive-button {
-	margin-right: 10px !important;
-    }
-};
-
-@include _notificationInformation_header_generateSubheaderActionButtons(".button-container");
-
+@include _controlPanel_header_generateSubheader(".sub-information")

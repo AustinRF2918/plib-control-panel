@@ -13,9 +13,10 @@ mixin _notificationInformation_header_generateHeader(name, selectorName)
 //takes the message that will be displayed on the actual 
 //header as well as the selector name to be used within
 //our sass.
-mixin _notificationInformation_header_generateSubheaderNavigation(name, selectorName)
+mixin _notificationInformation_header_generateSubheader(name, selectorName)
   div(class=["row", selectorName])
-    block
+    .col-md-12
+      h2=name
 
 //This mixin corresponds to the mixins contained within
 //sass/component/header/ header::generateNavStyle
@@ -23,8 +24,8 @@ mixin _notificationInformation_header_generateSubheaderNavigation(name, selector
 //styles to them and then compiles a list inline.
 // NOTE: Will use customName as the selector for inactive navs
 // and customName.customName"-active" for active navs. 
-mixin _notificationInformation_header_generateNavStyle(parent, current, dividerText, selectorName)
-  p(class=["current-location", selectorName]) <span class="current-parent">#{parent}</span> <span class="current-divider">#{dividerText}</span> <span class="current-data">#{current}</span>
+mixin _notificationInformation_header_generateSubheaderText(current, selectorName)
+  p(class=["current-location", selectorName]) <span class="current-data">#{current}</span>
 
 //This mixin corresponds to the mixins contained within
 //sass/component/header/ header::generateSubheaderActionButtons

@@ -2,12 +2,8 @@ include ../../utility/component-lib/_notificationInformation_header_generateHead
 include ../../utility/component-lib/_notificationInformation_container_generateContainer.pug
 body
   .container
-    +_notificationInformation_header_generateHeader("Food Message", "food-message")
-    +_notificationInformation_header_generateSubheaderNavigation("food-path")
-      .col-md-6
-        +_notificationInformation_header_generateNavStyle("Foods", "Cool New Apple", "/", "food-message-location")
-      .col-md-6.text-md-right
-        +_notificationInformation_header_generateSubheaderActionButtons("action-button", [["Archive", "archive-button"], ["Delete", "delete-button"]] ,"button-container")
+    +_notificationInformation_header_generateHeader("Settings", "settings")
+    +_notificationInformation_header_generateSubheader("Email Settings", "sub-information")
     .p-t-1
     +_notificationInformation_header_generateHeaderBreak()
   .container

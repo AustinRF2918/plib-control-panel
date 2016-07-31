@@ -96,6 +96,7 @@ html, body {
 .l-container {
   margin-left: 0px;
   margin-right: 40px;
+  margin-bottom: 20px;
   background: white; }
   @media screen and (min-width: 768px) {
     .l-container {
@@ -129,7 +130,6 @@ html, body {
       font-weight: 800; }
 
 .r-container {
-  background: red;
   height: 300px; }
   @media screen and (min-width: 768px) {
     .r-container {

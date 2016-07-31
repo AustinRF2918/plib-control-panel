@@ -85,31 +85,58 @@ html, body {
     font-family: "Source Sans Pro"; }
 
 .p-container {
-  display: flex;
   padding-top: 30px; }
+  @media screen and (min-width: 768px) {
+    .p-container {
+      display: flex; } }
+  @media screen and (max-width: 767px) {
+    .p-container {
+      display: flex-inline; } }
 
 .l-container {
-  width: 15%;
-  padding-top: 10px;
   margin-left: 0px;
   margin-right: 40px;
-  height: 300px;
   background: white; }
+  @media screen and (min-width: 768px) {
+    .l-container {
+      width: 22.5%; } }
+  @media screen and (max-width: 767px) {
+    .l-container {
+      width: 100%; } }
+  @media screen and (max-width: 767px) {
+    .l-container {
+      justify-content: space-between;
+      width: 100%; } }
   .l-container .btn-container {
     color: black;
     background: white;
     padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 20px;
-    display: flex; }
+    padding-bottom: 8px; }
+    @media screen and (min-width: 768px) {
+      .l-container .btn-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        display: flex; } }
+    @media screen and (max-width: 768px) {
+      .l-container .btn-container {
+        padding-right: 5%;
+        padding-left: 5%;
+        display: flex;
+        align-items: center; } }
     .l-container .btn-container-active {
       background: #e6e6e6;
       font-weight: 800; }
 
 .r-container {
-  width: 85%;
   background: red;
   height: 300px; }
+  @media screen and (min-width: 768px) {
+    .r-container {
+      width: 77.5%; } }
+  @media screen and (max-width: 767px) {
+    .r-container {
+      width: 100%; } }
 
 .settings {
   font-family: "Source Sans Pro";

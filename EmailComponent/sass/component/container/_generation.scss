@@ -1,13 +1,26 @@
 @mixin _controlPanel_container_generateParentContainer($selector) {
     #{$selector} {
-	display: flex;
+	@media screen and (min-width: 768px) {
+	  display: flex;
+	}
+
+	@media screen and (max-width: 767px) {
+	    display: flex-inline
+	}
+
 	@content;
     }
 }
 
 @mixin _controlPanel_container_generateGenericContainer($selector, $width) {
     #{$selector} {
-	width: $width;
+	@media screen and (min-width: 768px) {
+	  width: $width;
+	}
+
+	@media screen and (max-width: 767px) {
+	  width: 100%;
+	}
 	@content;
     }
 }

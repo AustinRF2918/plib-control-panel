@@ -11,29 +11,45 @@ html, body{
     padding-top: 30px;
 }
 
-@include _controlPanel_container_generateGenericContainer(".l-container", 15%) {
+@include _controlPanel_container_generateGenericContainer(".l-container", 22.5%) {
+    @media screen and (max-width: 767px) {
+	justify-content: space-between;
+	width: 100%;
+    }
+
     @include _controlPanel_container_generateBtnContainer(".btn-container")
     {
       color: black;
       background: white;
       padding-top: 8px;
       padding-bottom: 8px;
-      padding-left: 20px;
-      display: flex;
+
+      @media screen and (min-width: 768px) {
+	padding-left: 20px;
+	padding-right: 20px;
+        padding-top: 10px;
+        display: flex;
+      }
+      @media screen and (max-width: 768px) {
+	  padding-right: 5%;
+	  padding-left: 5%;
+	  display: flex;
+	  align-items: center;
+      }
+
+
       &-active{
 	  background: lighten(black, 90%);
 	  font-weight: 800;
       }
     }
 
-    padding-top: 10px;
     margin-left: 0px;
     margin-right: 40px;
-    height: 300px;
     background: white;
 };
 
-@include _controlPanel_container_generateGenericContainer(".r-container", 85%) {
+@include _controlPanel_container_generateGenericContainer(".r-container", 100% - 22.5%) {
     background: red;
     height: 300px;
 };

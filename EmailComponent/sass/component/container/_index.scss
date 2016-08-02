@@ -67,5 +67,32 @@ html, body{
     }
 }
 
-@include _controlPanel_container_generateInteractiveModule(".r-container");
+@include _controlPanel_container_generateAuthenticateChangeSubmodule(".r-container") {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26);
+    padding: 30px;
+    background: white;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    * {
+	margin: 0;
+    }
+
+    .info {
+	font-size: 24px;
+    }
+}
+
+.p-r-0-xs {
+    @media screen and (max-width: 767px) {
+	padding-right: 0px !important;
+    }
+}
+
+@include _controlPanel_container_generateAuthenticateChangeModule(".r-container"){
+};
 

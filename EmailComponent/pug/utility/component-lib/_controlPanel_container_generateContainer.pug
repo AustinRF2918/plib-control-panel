@@ -42,6 +42,28 @@ mixin _controlPanel_container_SUBMODULE_generateAuthenticateChangeModule(contain
           button(type="submit", class=btnSelector)=btnText
 
 //-This mixin cooresponds to the mixins contained within 
+//-sass/component/container/ container::authenticateTransactionModule.
+//-It takes a selector for the label, the for data, a placeholder
+//-button styling and button text
+mixin _controlPanel_container_SUBMODULE_generateAuthenticateTransactionModule(containerSelector, forName, labelName, formSelector, placeholderText, btnSelector, btnText, type)
+  div(class=[containerSelector])
+    .col-md-6
+      .form-group
+        label(for=forName)=labelName
+          .div.current-submod
+            p.title Platinum
+            p.info $499/month 
+          input(type=type, class=["form-control"], id=formSelector, placeholder=placeholderText)
+          input(type=type, class=["form-control"], id=formSelector, placeholder="Card Number (XXXX-XXXX-XXXX-XXXX")
+          .col-md-8
+            input(type=type, class=["form-control"], id=formSelector, placeholder="Expiration Date")
+          .col-md-4
+            input(type=type, class=["form-control"], id=formSelector, placeholder="CW")
+        .text-xs-center.text-sm-left
+          button(type="submit", class=btnSelector)=btnText
+
+
+//-This mixin cooresponds to the mixins contained within 
 //-sass/component/container/ container::interactiveModule.
 mixin _controlPanel_container_SUBMODULE_generateInteractiveModule(containerSelector, forName, labelName, btnSelector, btnText, type)
   div(class=[containerSelector])

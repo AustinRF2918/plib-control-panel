@@ -5,6 +5,6 @@ body
     +_controlPanel_header_generateHeader("Settings", "settings")
   .container.p-container
     +_controlPanel_container_generateButtonContainer("l-container", ["Account", "Password", "Plans and Billing", "Deactivate"], "btn-container", "Account")
-    +_controlPanel_container_SUBMODULE_generateInteractiveModule("r-container", "passwordReset", "Select Your Plan", "btn btn-primary", "Next: Add Billing Information")
+    +_controlPanel_container_SUBMODULE_generateAuthenticateTransactionModule("r-container", "authenticate-billing", "Choose your plan", "my-form", "Name as shown on card.", "btn btn-primary", "Next: Add Billing Information", "name")
 
      

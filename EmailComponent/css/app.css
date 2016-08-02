@@ -26,7 +26,7 @@
   .no-margin-mobile {
     margin: 0px; } }
 
-.btn-login {
+.btn-primary {
   background: #0288D1;
   padding: 10px 24px 10px 24px;
   position: relative;
@@ -43,7 +43,12 @@
   outline: none;
   transition-duration: 0.2s; }
 
+.form-control {
+  border-radius: 0px !important;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26); }
+
 .btn-login:hover {
+  border-radius: 0px !important;
   background: #01579B;
   color: white;
   transition-duration: 0.2s;

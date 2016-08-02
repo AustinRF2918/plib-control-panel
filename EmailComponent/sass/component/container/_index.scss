@@ -17,6 +17,7 @@ html, body{
     margin-right: 40px;
     margin-bottom: 20px;
     background: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26);
 
     @include _controlPanel_container_generateBtnContainer(".btn-container")
     {
@@ -50,16 +51,16 @@ html, body{
 };
 
 @mixin _controlPanel_container_interactiveModuleStyling(){
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26);
     margin-left: 10px;
     margin-right: 10px;
     height: 300px;
-    border: 1px gray solid;
     background:white;
 }
 
 @mixin _controlPanel_container_interactiveModuleSubStyling(){
     text-align: center;
-    background:grey;
+    background: lighten(black, 80%);
     p {
 	margin-top: 10px;
 	margin-bottom: 10px;
